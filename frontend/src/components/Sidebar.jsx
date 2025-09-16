@@ -5,7 +5,7 @@ import {
   PRODUCTIVITY_CARD,
   SIDEBAR_CLASSES,
   TIP_CARD,
-} from "../assets/dummy";
+} from "../assets/dummy.jsx";
 import { Sparkles, Lightbulb, Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import { Eye, EyeOff, LogIn, Mail, Lock } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
-import { BUTTON_CLASSES, INPUTWRAPPER } from '../assets/dummy';
+import { BUTTON_CLASSES, INPUTWRAPPER } from '../assets/dummy.jsx';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../config/API.config.js';

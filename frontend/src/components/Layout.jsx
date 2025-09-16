@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react'
-import Navbar from './Navbar'
-import Sidebar from './Sidebar'
+import Navbar from './Navbar.jsx'
+import Sidebar from './Sidebar.jsx'
 import { Outlet } from 'react-router-dom';
 import axios from 'axios';
 import { Circle, Clock, TrendingUp, Zap} from 'lucide-react';

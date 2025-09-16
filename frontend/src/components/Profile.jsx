@@ -7,7 +7,7 @@ import {
   personalFields,
   SECTION_WRAPPER,
     securityFields,
-} from "../assets/dummy";
+} from "../assets/dummy.jsx";
 
 import { ChevronLeft, UserCircle, Save, Shield, LogOut, Lock } from "lucide-react";
 import { useState, useEffect } from "react";

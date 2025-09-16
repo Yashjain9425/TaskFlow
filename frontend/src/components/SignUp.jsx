@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { UserPlus } from 'lucide-react';
-import {BUTTONCLASSES, FIELDS, Inputwrapper, MESSAGE_ERROR, MESSAGE_SUCCESS} from '../assets/dummy'
+import {BUTTONCLASSES, FIELDS, Inputwrapper, MESSAGE_ERROR, MESSAGE_SUCCESS} from '../assets/dummy.jsx'
 import axios from 'axios';
 import { url } from '../config/API.config.js';
 

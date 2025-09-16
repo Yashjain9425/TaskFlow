@@ -1,14 +1,14 @@
 import React from "react";
 import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Layout from "./components/Layout";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Dashboard from "./pages/Dashboard";
-import PendingPage from "./pages/PendingPage";
-import CompletePage from "./pages/CompletePage";
-import Profile from "./components/Profile";
-import CreateGroupForm from "./pages/CreateGroupForm";
+import Layout from "./components/Layout.jsx";
+import Login from "./components/Login.jsx";
+import SignUp from "./components/SignUp.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import PendingPage from "./pages/PendingPage.jsx";
+import CompletePage from "./pages/CompletePage.jsx";
+import Profile from "./components/Profile.jsx";
+import CreateGroupForm from "./pages/CreateGroupForm.jsx";
 
 const App = () => {
   const navigate = useNavigate();

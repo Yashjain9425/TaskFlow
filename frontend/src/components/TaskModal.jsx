@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from "react";
-import {baseControlClasses, DEFAULT_TASK, priorityStyles} from "../assets/dummy";
+import {baseControlClasses, DEFAULT_TASK, priorityStyles} from "../assets/dummy.jsx";
 import { PlusCircle,X, Save, AlignLeft, Flag, Calendar, CheckCircle } from "lucide-react";
 
 // const API_BASE = "http://localhost:3000/api/tasks";

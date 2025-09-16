@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getPriorityColor, MENU_OPTIONS, TI_CLASSES } from "../assets/dummy";
+import { getPriorityColor, MENU_OPTIONS, TI_CLASSES } from "../assets/dummy.jsx";
 import axios from "axios";
 import { Calendar, CheckCircle2, MoreVertical, Clock } from "lucide-react";
-import { getPriorityBadgeColor } from "../assets/dummy";
+import { getPriorityBadgeColor } from "../assets/dummy.jsx";
 import { format, isToday } from "date-fns";
-import TaskModal from "./TaskModal";
+import TaskModal from "./TaskModal.jsx";
 import { API_BASE } from "../config/API.config.js";
 // const API_BASE = "http://localhost:3000/api/tasks";
 

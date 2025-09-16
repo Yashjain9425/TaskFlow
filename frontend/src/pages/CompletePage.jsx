@@ -1,8 +1,8 @@
 import React, { useMemo, useState} from "react";
-import { CT_CLASSES, SORT_OPTIONS } from "../assets/dummy";
+import { CT_CLASSES, SORT_OPTIONS } from "../assets/dummy.jsx";
 import { CheckCircle2, Filter } from "lucide-react";
 import { useOutletContext } from "react-router-dom";
-import TaskItem from "../components/TaskItem";
+import TaskItem from "../components/TaskItem.jsx";
 
 const CompletePage = () => {
 
