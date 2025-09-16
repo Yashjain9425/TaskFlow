@@ -4,6 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import { BUTTON_CLASSES, INPUTWRAPPER } from '../assets/dummy';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { url } from '../config/API.config.js';
 
 const INITIAL_FORM = {email: "", password: ""}
 const Login = ({ onSubmit, onSwitchMode }) => {
@@ -13,8 +14,9 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const url = 'http://localhost:3000'
-
+  // const url = 'http://localhost:3000'
+  // const url = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  // console.log("Resolved API URL:", url);
   useEffect(() => {
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("userId");

@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import PendingPage from "./pages/PendingPage";
 import CompletePage from "./pages/CompletePage";
 import Profile from "./components/Profile";
+import CreateGroupForm from "./pages/CreateGroupForm";
 
 const App = () => {
   const navigate = useNavigate();
@@ -83,6 +84,7 @@ const App = () => {
         <Route path="/pending" element={<PendingPage />} />
         <Route path="/complete" element={<CompletePage />} />
         <Route path="/profile" element={<Profile user={currentUser} setCurrentUser={setCurrentUser} onLogout={handleLogout} />} />
+        <Route path="/grouptask" element={<CreateGroupForm/>} />
       </Route>
 
       <Route

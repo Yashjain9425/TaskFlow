@@ -3,6 +3,9 @@ import User from '../models/userModel.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_here';
 
+// Debug: Log the JWT secret being used
+console.log('Auth Middleware - JWT_SECRET:', JWT_SECRET ? 'SET' : 'NOT SET');
+
 export default async function authMiddleware(req, res, next){
     //GREAB THE BEARER TOKEN FROM AUTHORIZATION HEADER
 

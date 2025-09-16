@@ -13,8 +13,8 @@ import { ChevronLeft, UserCircle, Save, Shield, LogOut, Lock } from "lucide-reac
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
-const API_URL = "http://localhost:3000";
+import {url} from "../config/API.config.js"; // Adjust the import path as necessary
+// const API_URL = "http://localhost:3000";
 
 const Profile = ({ setCurrentUser, onLogout }) => {
   const [profile, setProfile] = useState({ name: "", email: "" });
@@ -29,7 +29,7 @@ const Profile = ({ setCurrentUser, onLogout }) => {
     const token = localStorage.getItem("token");
     if (!token) return;
     axios
-      .get(`${API_URL}/api/user/me`, {
+      .get(`${url}/api/user/me`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(({ data }) => {
@@ -45,7 +45,7 @@ const Profile = ({ setCurrentUser, onLogout }) => {
     try {
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        `${API_URL}/api/user/profile`,
+        `${url}/api/user/profile`,
         { name: profile.name, email: profile.email },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -72,7 +72,7 @@ const Profile = ({ setCurrentUser, onLogout }) => {
     try {
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        `${API_URL}/api/user/password`,
+        `${url}/api/user/password`,
         {
           currentPassword: passwords.current,
           newPassword: passwords.new,

@@ -15,9 +15,13 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
-})
+    },
 
-const userModel = mongoose.models.user || mongoose.model('user', userSchema);
+    groups: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Group'
+    }]
+}, { timestamps: true });
 
-export default userModel;
+const User = mongoose.models.User || mongoose.model('User', userSchema);
+export default User;

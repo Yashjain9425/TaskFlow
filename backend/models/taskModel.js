@@ -14,24 +14,41 @@ const taskSchema = new mongoose.Schema({
         enum: ['Low', 'Medium', 'High'],
         default: 'Low'
     },
-    dueDate:{
+    dueDate: {
         type: Date,
     },
-    owner:{
+
+    // Task owner (for personal tasks)
+    owner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        ref: 'User'
     },
 
-    completed:{
+    // For group tasks
+    group: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Group'
+    },
+
+    // Assigned members (optional, for subgroup inside group)
+    assignees: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }],
+
+    completed: {
         type: Boolean,
         default: false
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
     }
+}, { timestamps: true });
+
+// Ensure either 'owner' or 'group' is set
+taskSchema.pre('save', function (next) {
+    if (!this.owner && !this.group) {
+        return next(new Error('Task must have either an owner or a group.'));
+    }
+    next();
 });
 
-const Task = mongoose.model.Task || mongoose.model('Task', taskSchema);
+const Task = mongoose.models.Task || mongoose.model('Task', taskSchema);
 export default Task;

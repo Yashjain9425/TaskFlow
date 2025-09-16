@@ -5,8 +5,8 @@ import { Calendar, CheckCircle2, MoreVertical, Clock } from "lucide-react";
 import { getPriorityBadgeColor } from "../assets/dummy";
 import { format, isToday } from "date-fns";
 import TaskModal from "./TaskModal";
-
-const API_BASE = "http://localhost:3000/api/tasks";
+import { API_BASE } from "../config/API.config.js";
+// const API_BASE = "http://localhost:3000/api/tasks";
 
 const TaskItem = ({
   task,
